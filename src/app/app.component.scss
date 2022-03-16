@@ -1,0 +1,155 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 100%;
+    height: auto;
+    padding: 30px;
+
+    max-width: 1440px;
+    margin: 0 auto;
+
+    .add-task-container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        column-gap: 20px;
+    
+        & > * {
+            height: 40px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    
+        input, select {
+            border: 1px solid rgb(211, 211, 211);
+        }
+    
+        button {
+            border: none;
+            background-color: rgb(60, 122, 238);
+            color: white;
+            letter-spacing: 1px;
+            cursor: pointer;
+        }
+    }
+
+    .tasks-container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        height: auto;
+        align-items: flex-start;
+        gap: 20px;
+        .task {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+    
+            display: flex;
+            flex-direction: column;
+
+            &:nth-child(1) {
+                border: 2px solid rgb(91, 154, 248);
+            }
+    
+            &:nth-child(2) {
+                border: 2px solid rgb(91, 219, 248);
+            }
+    
+            &:nth-child(3) {
+                border: 2px solid rgb(25, 155, 72);
+            }
+    
+            &-top {
+                width: 100%;
+                padding: 10px;
+    
+                background-color: rgb(237, 237, 237);
+                border-bottom: 2px solid rgb(211, 211, 211);
+            }
+    
+            &-bottom {
+                width: 100%;
+                padding: 10px;
+
+                display: flex;
+                flex-direction: column;
+                row-gap: 20px;
+                list-style: none;
+    
+                &-container {
+                    width: 100%;
+                    border: 2px solid rgb(211, 211, 211);
+                    border-radius: 5px;
+                    padding: 5px 10px 5px 10px;
+    
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+    
+                    &-left {
+                        font-size: 16px;
+
+                        div {
+                            padding: 2px 5px;
+                            border-radius: 5px;
+                            display: inline-block;
+                            margin-top: 10px;
+                            
+                            p {
+                                color: white;
+                                font-size: 13px;
+                                font-weight: bold;
+                            }
+                        }
+
+                        .easy {
+                            background-color: rgb(25, 155, 72);
+                        }
+
+                        .medium {
+                            background-color: rgb(60, 122, 238);
+                        }
+
+                        .hard {
+                            background-color: rgb(230, 62, 62);
+                        }
+                    }
+    
+                    &-right {
+                        display: flex;
+                        flex-direction: row;
+                        column-gap: 10px;
+
+                        .icon-div {
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 5px;
+                            color: white;
+                            border: none;
+                            cursor: pointer;
+
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                        }
+
+                        .right {
+                            background-color: rgb(60, 122, 238);
+                        }
+
+                        .left {
+                            background-color: rgb(25, 155, 72);
+                        }
+
+                        .delete {
+                            background-color: rgb(230, 62, 62);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
